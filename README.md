@@ -1,4 +1,4 @@
 mgrid
 =====
 
-Moder Grid
+Modern Grid
