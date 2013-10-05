@@ -84,7 +84,7 @@
 	margin-left: -1em;		/* fallback for browsers not supporting rems values */
 	margin-left: -1rem;	/* normalized gutters value for nested columns, no matter differents font-size values */ 
 }
-.cols.gutters > .colContent {
+.cols.gutters .colContent {
 	margin-left: 1em;		/* fallback for browsers not supporting rems values */
 	margin-left: 1rem;	/* normalized gutters value for nested columns, no matter differents font-size values */ 
 }
