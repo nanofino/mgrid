@@ -58,7 +58,7 @@ Both declarations must have the same value, althought **_.cols.gutters_** must h
 It could be done with just one declaration (margin-left: 1rem for .colContent, and overrided to 0 for the first-child) but that approach makes the first column wider.
 
 Finally
-___
+---
 
 This grid is free to use and modified as you need. If you use it, be sure to let me know how does it work. If you find a bug, or a come up with an enhancement, drop me a line.
 Also, I'd love to see it in action, so don't forget to send me the URL where it is used.
