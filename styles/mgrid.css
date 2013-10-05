@@ -19,10 +19,6 @@
  	If you'd like the columns to have gutters, add the class "gutters" to the container.
 */
 
-html {
-	overflow-x: hidden; /* to prevent negative margins to generate horizontal scroll. */
-}
-	
 .cols:after {
 	display: block;
 	clear: both;
@@ -33,9 +29,6 @@ html {
 
 .column {
 	float: left;
-	-webkit-box-sizing: border-box; 
-	-moz-box-sizing: border-box;
-	box-sizing: border-box; /* Needed for prevent padding to increase widths values */
 }
 
 .column:first-child:last-child {
@@ -88,10 +81,10 @@ html {
 
 /*--------- WITH GUTTERS -------------*/
 .cols.gutters {
-	margin: 0 -1em;		/* fallback for browsers not supporting rems values */
-	margin: 0 -1rem;	/* normalized gutters value for nested columns, no matter differents font-size values */ 
+	margin-left: -1em;		/* fallback for browsers not supporting rems values */
+	margin-left: -1rem;	/* normalized gutters value for nested columns, no matter differents font-size values */ 
 }
-.cols.gutters > .column {
-	padding: 0 1em;		/* fallback for browsers not supporting rems values */
-	padding: 0 1rem;	/* normalized gutters value for nested columns, no matter differents font-size values */ 
+.cols.gutters > .column > .colContent {
+	margin-left: 1em;		/* fallback for browsers not supporting rems values */
+	margin-left: 1rem;	/* normalized gutters value for nested columns, no matter differents font-size values */ 
 }

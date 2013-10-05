@@ -10,8 +10,18 @@ h2 {
 }
 
 .cols:not(.gutters) .column:nth-child(2n) {
-	background-color: #A0A
+	background-color: #EEE;
+}
+
+.cols:not(.gutters) .column:nth-child(2n-1) {
+	background-color: #BBB;
 }
 .cols.gutters .column > .colContent {
 	background-color: #EEE;
+}
+
+.colContent {
+	padding: 1em;
+	text-align: center;
+	font-family: Arial, Helvetica, Verdana, sans-serif; 
 }
