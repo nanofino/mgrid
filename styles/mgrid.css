@@ -95,21 +95,3 @@ html {
 	padding: 0 1em;		/* fallback for browsers not supporting rems values */
 	padding: 0 1rem;	/* normalized gutters value for nested columns, no matter differents font-size values */ 
 }
-
-/*------ DEMO STYLES ------*/
-html, body {
-	font-size: 16px;
-	padding: 0;
-	margin: 0;
-}
-h2 {
-	background-color: #DBB;
-
-}
-
-.cols:not(.gutters) .column:nth-child(2n) {
-	background-color: #A0A
-}
-.cols.gutters .column > .colContent {
-	background-color: #EEE;
-}
