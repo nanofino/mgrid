@@ -10,8 +10,13 @@ As a modern approach to laying out a grid, it is intended for modern browsers th
 
 How to use it:
 ---
-You don't need to specificate the amount of columns to determinate the column's width. 
-All you have to do is set a container and apply the class "cols" to it, and fill it with columns, which must have the class "column".
+First, you have to link the *mgrid.css* file in your html's head:
+```HTML
+<link rel="stylesheet" href="styles/mgrid.css" type="text/css">
+```
+Once you´ve the grid link added, you can use it however you want. Nested columns are allowed. The grid has a maximmum of 12 columns. More columns seem to be unnecesaries. It could be extended easily, so if you need more columns, let me know.
+
+You don't need to specificate the amount of columns to determinate the column's width. All you have to do is set a container and apply the class "cols" to it, and fill it with columns, which must have the class "column".
 
 For example, for a 4-column layout:
 ```html
