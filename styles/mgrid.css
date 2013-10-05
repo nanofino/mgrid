@@ -1,0 +1,115 @@
+/*
+
+ MODERN GRID
+ www.nanofino.com.ar/mgrid
+ Copyright (c) Hernan Fino, freely distributable under the terms of the MIT license.
+
+ CSS3-based grid framework. It automaticly defines columns' equal widths without specifing the amount of columns to display. It relays in the count of childs of a container.
+ 
+ How to use it:
+ 	Code a HTML structure of a container with the class "cols", and containing ONLY children with the class "column".
+ 	
+ 	Container ------> 	<div class="cols"> 
+ 	Columns -------->		<div class="column">...</div>
+	 						<div class="column">...</div>
+	 						...
+	 						<div class="column">...</div>
+ 						</div>
+
+ 	If you'd like the columns to have gutters, add the class "gutters" to the container.
+*/
+
+html {
+	overflow-x: hidden; /* to prevent negative margins to generate horizontal scroll. */
+}
+	
+.cols:after {
+	display: block;
+	clear: both;
+	height: 0px;
+	content: ".";
+	visibility: hidden;
+}
+
+.column {
+	float: left;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; /* Needed for prevent padding to increase widths values */
+}
+
+.column:first-child:last-child {
+	float: none; /* Avoid floating for one column */
+}
+.column:first-child:nth-last-child(2),
+.column:first-child:nth-last-child(2) ~ .column {
+	width: 50%;
+}
+.column:first-child:nth-last-child(3),
+.column:first-child:nth-last-child(3) ~ .column {
+	width: 33.3333%;
+}
+.column:first-child:nth-last-child(4),
+.column:first-child:nth-last-child(4) ~ .column {
+	width: 25%;
+}
+.column:first-child:nth-last-child(5),
+.column:first-child:nth-last-child(5) ~ .column {
+	width: 20%;
+}
+.column:first-child:nth-last-child(6),
+.column:first-child:nth-last-child(6) ~ .column {
+	width: 16.6666%;
+}
+.column:first-child:nth-last-child(7),
+.column:first-child:nth-last-child(7) ~ .column {
+	width: 14.2857%;
+}
+.column:first-child:nth-last-child(8),
+.column:first-child:nth-last-child(8) ~ .column {
+	width: 12.5%;
+}
+.column:first-child:nth-last-child(9),
+.column:first-child:nth-last-child(9) ~ .column {
+	width: 11.1111%;
+}
+.column:first-child:nth-last-child(10),
+.column:first-child:nth-last-child(10) ~ .column {
+	width: 10%;
+}
+.column:first-child:nth-last-child(11),
+.column:first-child:nth-last-child(11) ~ .column {
+	width: 9.09090%;
+}
+.column:first-child:nth-last-child(12),
+.column:first-child:nth-last-child(12) ~ .column {
+	width: 8.33333%;
+}
+
+/*--------- WITH GUTTERS -------------*/
+.cols.gutters {
+	margin: 0 -1em;		/* fallback for browsers not supporting rems values */
+	margin: 0 -1rem;	/* normalized gutters value for nested columns, no matter differents font-size values */ 
+}
+.cols.gutters > .column {
+	padding: 0 1em;		/* fallback for browsers not supporting rems values */
+	padding: 0 1rem;	/* normalized gutters value for nested columns, no matter differents font-size values */ 
+}
+
+/*------ DEMO STYLES ------*/
+html, body {
+	font-size: 16px;
+	padding: 0;
+	margin: 0;
+}
+h2 {
+	background-color: #DBB;
+
+}
+
+.cols:not(.gutters) .column:nth-child(2n) {
+	background-color: #A0A
+}
+.cols.gutters .column > .colContent {
+	background-color: #EEE;
+}
